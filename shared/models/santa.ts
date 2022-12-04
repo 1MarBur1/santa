@@ -1,4 +1,4 @@
-interface ISanta {
+export interface ISanta {
 	name: string,
 	wishes: string,
 	id: string,

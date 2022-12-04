@@ -1,3 +1,4 @@
+import { ISanta } from "../models/santa";
 import { instance } from "./axios";
 
 const getAllSantas = (): Promise<ISanta[]> => {

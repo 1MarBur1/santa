@@ -3,6 +3,7 @@ import { useRouter } from 'next/router';
 import { useEffect, useState } from 'react';
 import { useMutation, useQuery } from 'react-query';
 import { deleteSantaById, getAllSantas } from '../shared/api/santa';
+import { ISanta } from '../shared/models/santa';
 
 const { Title, Text } = Typography;
 
