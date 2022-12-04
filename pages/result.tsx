@@ -70,6 +70,8 @@ const ResultPage = () => {
 						style={{ width: '100%', height: '40px', marginTop: '5px', backgroundColor: '#3B23F6' }}
 						type='primary'
 						onClick={() => {
+							localStorage.removeItem('data')
+							localStorage.removeItem('confirmed')
 							router.push('/')
 						}}
 					>
