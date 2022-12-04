@@ -20,8 +20,10 @@ const ResultPage = () => {
 	}, []);
 
 	useEffect(() => {
-		if (typeof localStorageObj !== 'undefined')
+		if (typeof localStorageObj !== 'undefined') {
 			setData(JSON.parse(localStorageObj.getItem('data') as string))
+			setConfirm(JSON.parse(localStorageObj.getItem('confirmed')))
+		}
 	}, [localStorageObj])
 
 	return (
@@ -58,6 +60,7 @@ const ResultPage = () => {
 						style={{ width: '100%', height: '40px', marginTop: '32px' }}
 						onClick={() => {
 							deleteMutation.mutate(data?.id as string)
+							localStorage.setItem('confirmed', 'true')
 							setConfirm(true)
 						}}
 					>
